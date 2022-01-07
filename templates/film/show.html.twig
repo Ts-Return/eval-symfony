@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <article>
+        <h1>{{ film.nom }}</h1>
+        <div class="content">
+            <h2> Synopsis : {{ film.synopsis }}</h2>
+            <h3>Type : {{ film.type }}</h3>
+            <p>Date Création {{ film.date_creation }}</p>
+        </div>
+    </article>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste{% endblock %}
+
+{% block body %}
+  <section class="bars">
+    <div class="container">
+      <div class="row">
+        {% for film in Film %}
+          <article>
+            <h2>{{ film.nom }}</h2>
+            <div class="content">
+              <img src="{{ film.type }}" alt="">
+              {{ film.content | raw}}
+              <a href="{{ path('film_show',{id: bar.id}) }}" class="btn btn-primary"> info</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section>
+
+  </section>
+{% endblock %}
