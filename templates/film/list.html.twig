@@ -6,14 +6,11 @@
   <section class="bars">
     <div class="container">
       <div class="row">
-        {% for film in Film %}
+        {% for film in films %}
           <article>
             <h2>{{ film.nom }}</h2>
-            <div class="content">
-              <img src="{{ film.type }}" alt="">
-              {{ film.content | raw}}
-              <a href="{{ path('film_show',{id: bar.id}) }}" class="btn btn-primary"> info</a>
-            </div>
+            <p>{{ film.synopsis }}</p>
+            <p>{{ film.type }}</p>
           </article>
         {% endfor %}
       </div>
